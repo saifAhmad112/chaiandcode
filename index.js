@@ -2,9 +2,14 @@ require('dotenv').config()
 
 const express = require('express')
 const cors = require('cors');
+const connectDb = require('./db');
+
 
 const app = express()
 const port = 5000
+
+// Connect to MongoDB
+connectDb();
 
 const jsonFIle=[
     {
