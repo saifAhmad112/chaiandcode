@@ -1,16 +1,18 @@
-require('dotenv').config()
+// require('dotenv').config()
+import dotenv from "dotenv"
+import connectDb from "./db/index.js";
+import cors from "cors"
+import {app} from './app.js'
 
-const express = require('express')
-const cors = require('cors');
-const connectDb = require('./db');
 
 
-const app = express()
 const port = 5000
 
-// Connect to MongoDB
-connectDb();
 
+dotenv.config()
+// Connect to MongoDB
+
+connectDb()
 const jsonFIle=[
     {
         title:"node",
